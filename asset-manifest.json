@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Brainy-Cards/static/css/main.c610ee7d.css",
+    "main.js": "/Brainy-Cards/static/js/main.fe42761a.js",
+    "index.html": "/Brainy-Cards/index.html",
+    "main.c610ee7d.css.map": "/Brainy-Cards/static/css/main.c610ee7d.css.map",
+    "main.fe42761a.js.map": "/Brainy-Cards/static/js/main.fe42761a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c610ee7d.css",
+    "static/js/main.fe42761a.js"
+  ]
+}
