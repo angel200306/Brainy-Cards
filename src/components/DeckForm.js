@@ -11,10 +11,6 @@ export default function DeckForm({ addDeck }) {
     };
 
     return (
-        <div>
-        <button className="view-decks-button" onClick={goBack}>
-            View All Decks
-        </button>
         <form onSubmit={handleSubmit}>
             <input
             value={name}
@@ -23,6 +19,5 @@ export default function DeckForm({ addDeck }) {
             />
             <button type="submit">Add deck</button>
         </form>
-        </div>
     );
 }
