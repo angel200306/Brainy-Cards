@@ -109,7 +109,6 @@ form {
     transition: 0.2s;
 }
 
-
 .back-button {
     position: fixed; /* фіксуємо щодо вікна */
     top: 10px;       /* відступ зверху */
