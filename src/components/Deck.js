@@ -6,6 +6,9 @@ export default function Deck({ deck, goBack, addCard }) {
     return (
         <div>
             <button className="back-button" onClick={goBack}>Back</button>
+            <button className="view-decks-button" onClick={goBack}>
+                View All Decks
+            </button>
 
             <h2>{deck.name}</h2>
             <h3>Cards</h3>
