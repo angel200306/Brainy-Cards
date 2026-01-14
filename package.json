@@ -2,7 +2,7 @@
   "name": "my-brainycards-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://angel200306.github.io/Brainy-Cards/",
+  "homepage": "https://angel200306.github.io/Brainy-Cards",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
