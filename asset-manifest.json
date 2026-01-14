@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Brainy-Cards/static/css/main.4e9d6030.css",
-    "main.js": "/Brainy-Cards/static/js/main.fe42761a.js",
+    "main.css": "/Brainy-Cards/static/css/main.ace6e60a.css",
+    "main.js": "/Brainy-Cards/static/js/main.207d094a.js",
     "index.html": "/Brainy-Cards/index.html",
-    "main.4e9d6030.css.map": "/Brainy-Cards/static/css/main.4e9d6030.css.map",
-    "main.fe42761a.js.map": "/Brainy-Cards/static/js/main.fe42761a.js.map"
+    "main.ace6e60a.css.map": "/Brainy-Cards/static/css/main.ace6e60a.css.map",
+    "main.207d094a.js.map": "/Brainy-Cards/static/js/main.207d094a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e9d6030.css",
-    "static/js/main.fe42761a.js"
+    "static/css/main.ace6e60a.css",
+    "static/js/main.207d094a.js"
   ]
 }
