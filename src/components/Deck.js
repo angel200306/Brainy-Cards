@@ -1,28 +1,34 @@
 import React from "react";
-import CardForm from "./CardForm";
 import FlashCard from "./FlashCard";
 
-export default function Deck({ deck, goBack, addCard }) {
+export default function Deck({ deck, deckId, goBack, addCard, startStudy, showStudyButton }) {
     return (
         <div>
-            <button className="back-button" onClick={goBack}>Back</button>
-
+            <button onClick={goBack}>⬅ Back</button>
             <h2>{deck.name}</h2>
-            <h3>Cards</h3>
-             <div className="cards-container">
-                 {Object.entries(deck.cards).map(([id, card]) => (
-                     <FlashCard
-                         key={id}
-                         question={card.question}
-                         answer={card.answer}
-                     />
-                ))}
-             </div>
 
-            <div className="form-wrapper">
-                <CardForm addCard={addCard} />
+                <button className="button-study" onClick={startStudy}>
+                    📚 Study Cards
+                </button>
+
+            {/* Форма додавання карток */}
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    const question = e.target.question.value;
+                    const answer = e.target.answer.value;
+                    addCard(question, answer);
+                    e.target.reset();
+                }}
+            >
+                <input name="question" placeholder="Question" required />
+                <input name="answer" placeholder="Answer" required />
+                <button type="submit">Add Card</button>
+            </form>
+
+            <div>
+                <h3>Cards in this deck: {Object.keys(deck.cards).length}</h3>
             </div>
-
         </div>
     );
 }

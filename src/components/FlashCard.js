@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FlashCard.css"
+import "./FlashCard.css";
 
 export default function FlashCard({ question, answer }) {
     const [flipped, setFlipped] = useState(false);
@@ -14,4 +14,3 @@ export default function FlashCard({ question, answer }) {
         </div>
     );
 }
-

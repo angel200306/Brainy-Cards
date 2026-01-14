@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export default function DeckForm({ addDeck }) {
+export default function DeckForm({ addDeck, startStudy }) {
     const [name, setName] = useState("");
 
     const handleSubmit = (e) => {
@@ -17,6 +17,11 @@ export default function DeckForm({ addDeck }) {
             onChange={(e) => setName(e.target.value)}
             placeholder="Deck Name"
             />
+            {startStudy && (
+                <button className="button-study" onClick={startStudy}>
+                    📚 Study Cards
+                </button>
+            )}
             <button type="submit">Add deck</button>
         </form>
     );

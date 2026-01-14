@@ -122,3 +122,26 @@ form {
     cursor: pointer;
 }
 
+.button-study {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 1500px;
+    font-family: Arial, sans-serif;
+}
+
+.button-know {
+    margin-top: 40px;
+    margin-left: 40px;
+    background-color: #28a745;
+    color: #fff;
+    margin-left: 150px;
+}
+
+.button-dont-know {
+    margin-top: 40px;
+    background-color: #dc3545;
+    color: #fff;
+    margin-left: 550px;
+}
