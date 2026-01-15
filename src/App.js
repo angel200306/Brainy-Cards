@@ -47,7 +47,6 @@ export default function App() {
         });
     };
 
-    // Перевірка, чи є картки для повторення
     const hasCardsToStudy = (deckId) => {
         const deck = decks[deckId];
         if (!deck) return false;
@@ -59,7 +58,7 @@ export default function App() {
     return (
         <div className="app-container">
             <h1>Brainy Cards</h1>
-            <p>Disclaimer!!!! This project isn't commercial. This project is my pet project. I developed this project from my personal guess.</p>
+            <p>Disclaimer!!!! This project isn't commercial. This project is my pet project. I developed this project for my personal guess.</p>
             <h2>Create a new deck with cards to start learning!</h2>
             {studyCards && currentDeck ? (
                 <StudyCards

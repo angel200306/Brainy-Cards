@@ -11,7 +11,6 @@ export default function Deck({ deck, deckId, goBack, addCard, startStudy, showSt
                     📚 Study Cards
                 </button>
 
-            {/* Форма додавання карток */}
             <form
                 onSubmit={(e) => {
                     e.preventDefault();

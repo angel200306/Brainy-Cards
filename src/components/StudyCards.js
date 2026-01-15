@@ -5,7 +5,6 @@ export default function StudyCards({ deck, deckId, setDecks, goBack }) {
     const [cardsToStudy, setCardsToStudy] = useState([]);
     const [timeLeft, setTimeLeft] = useState("");
 
-    // Запускаємо відбір карток лише 1 раз при відкритті
     useEffect(() => {
         const todayCards = Object.entries(deck.cards || {})
             .filter(([_, card]) => card.nextReview <= Date.now())
@@ -48,7 +47,6 @@ export default function StudyCards({ deck, deckId, setDecks, goBack }) {
         return () => clearInterval(intervalId);
     }, [deck, cardsToStudy]);
 
-    // Якщо немає карток сьогодні
     if (!cardsToStudy || cardsToStudy.length === 0) {
         return (
             <div>
@@ -61,7 +59,7 @@ export default function StudyCards({ deck, deckId, setDecks, goBack }) {
         );
     }
 
-    const card = cardsToStudy[0]; // беремо першу картку
+    const card = cardsToStudy[0];
 
     const handleAnswer = (known) => {
         const newInterval = known ? Math.min(card.interval * 2, 30) : 1;
@@ -74,13 +72,11 @@ export default function StudyCards({ deck, deckId, setDecks, goBack }) {
             nextReview: Date.now() + newInterval * 86400000,
         };
 
-        // оновлюємо дані в головному стані
         setDecks((prev) => ({
             ...prev,
             [deckId]: updatedDeck,
         }));
 
-        // правильне видалення картки з cardsToStudy
         setCardsToStudy((prev) =>
             prev.filter((c) => c.cardId !== card.cardId)
         );
